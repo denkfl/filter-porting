@@ -10,7 +10,7 @@ set VS_STRING=Visual Studio 14 2015 Win64
 if "%ADTF3_DIR%" == "" (
 	set ADTF3_DIR=C:/SDK/adtf\3.3.0
 ) else (
-	set "ADTF3_DIR=%ADTF_DIR:\=/%"
+	set "ADTF3_DIR=%ADTF3_DIR:\=/%"
 	REM replace backslashes with slashes
 )
 
