@@ -1,3 +1,3 @@
-add_subdirectory(AADC_ArduinoCommunication)
+add_subdirectory(arduino_communication)
 
 
