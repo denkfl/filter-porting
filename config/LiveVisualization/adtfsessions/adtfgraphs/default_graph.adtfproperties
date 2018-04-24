@@ -25,14 +25,6 @@
           <properties/>
         </property_set>
         <property_set>
-          <name>services/kernel.service.adtf</name>
-          <properties/>
-        </property_set>
-        <property_set>
-          <name>services/reference_clock.service.adtf</name>
-          <properties/>
-        </property_set>
-        <property_set>
           <name>streaming_graphs/default_streaming_graph/streaming_dock_in_ports/Ultrasonic_Stream</name>
           <properties/>
         </property_set>
@@ -46,6 +38,14 @@
         </property_set>
         <property_set>
           <name>graphs/default_filter_graph/streaming_in_ports/Ultrasonic_Stream</name>
+          <properties/>
+        </property_set>
+        <property_set>
+          <name>services/kernel.service.adtf</name>
+          <properties/>
+        </property_set>
+        <property_set>
+          <name>services/reference_clock.service.adtf</name>
           <properties/>
         </property_set>
         <property_set>

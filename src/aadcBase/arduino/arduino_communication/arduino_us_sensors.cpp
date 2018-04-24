@@ -33,12 +33,14 @@ tResult cArduinoUSSensors::Construct()
 {
     RETURN_IF_FAILED(cSampleStreamingSource::Construct());
 
+    //get the media description
     object_ptr<IStreamType> pType;
-    adtf::mediadescription::ant::create_adtf_default_stream_type_from_service("tUltrasonicStruct", pType, m_outputUSSampleFactory);
+    RETURN_IF_FAILED(adtf::mediadescription::ant::create_adtf_default_stream_type_from_service("tUltrasonicStruct", pType, m_outputUSSampleFactory));
 
-    // find the index of the element for faster access in the process method.
-    adtf_ddl::access_element::find_index(m_outputUSSampleFactory, "tFrontLeft", m_nUSFrontLeft);
+    // find the indexes of the element for faster access in the process method.
+    RETURN_IF_FAILED(adtf_ddl::access_element::find_index(m_outputUSSampleFactory, "tSideLeft", m_nUSSideLeft));
 
+    //create the pins
     RETURN_IF_FAILED(create_pin(*this, m_oOutputWriter, "Ultrasonic", pType));
 
     RETURN_NOERROR;
@@ -79,7 +81,7 @@ tVoid cArduinoUSSensors::TimerFunc()
     {
         auto oCodec = m_outputUSSampleFactory.MakeCodecFor(pSample);
 
-        if IS_OK(oCodec.SetElementValue(m_nUSFrontLeft, fOutValue))
+        if IS_OK(oCodec.SetElementValue(m_nUSSideLeft, fOutValue))
         {
             // the sample buffer lock is released in the destructor of oCodec
             m_oOutputWriter << pSample << flush << trigger;

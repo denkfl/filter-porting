@@ -48,7 +48,8 @@ class cArduinoUSSensors : public adtf::streaming::cSampleStreamingSource
     private:
         tVoid TimerFunc();
         
-        tSize m_nUSFrontLeft;
+        /*! The us side left ddl ID*/
+        tSize m_nUSSideLeft;
 };
 
 

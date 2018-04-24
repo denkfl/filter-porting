@@ -62,12 +62,12 @@
         <layout_set>
           <name>streaming_graphs/default_streaming_graph/streaming_sources/Arduino Ultrasonic Sensors</name>
           <boundary>
-            <x>152</x>
-            <y>212</y>
+            <x>134</x>
+            <y>89</y>
             <width>0</width>
             <height>0</height>
           </boundary>
-          <selected>true</selected>
+          <selected>false</selected>
           <connection_layout>
             <name/>
             <centerLineIsManual>true</centerLineIsManual>
